@@ -16,7 +16,7 @@ def record_key(event):
   if is_recording:
     key = event.name
     event_time = event.time - start_time
-    if (key == RECORD_KEY or key == PLAY_KEY or key == EXIT_KEY):
+    if (key == RECORD_KEY or key == PLAY_KEY):
       return
     recorded_keys.append((key, event_time, event.event_type))
     print('Recorded:', key, 'Event Type:', event.event_type)
